@@ -1,0 +1,53 @@
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #00d5ff8c;
+  animation:  ani-full-bg-nb 10s infinite;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+#nprogress .spinner-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    animation: nprogress-spinner 0.5s 1s infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+
+@keyframes nprogress-spinner {
+from,to{
+    scale: 1;
+    background-color: aliceblue;
+    filter: none;
+}
+50%{
+    background-color: aliceblue;
+    filter: blur(5px);
+    scale: 0.5;
+}
+}
