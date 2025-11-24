@@ -1,0 +1,10 @@
+window.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll(`[act-tr]`).forEach(gurt=>{
+    gurt.addEventListener("click",function(){
+        NProgress.start()
+    })
+})
+    window.addEventListener("load",function(){
+        NProgress.done()
+    })
+})
