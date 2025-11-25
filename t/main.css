@@ -15,7 +15,11 @@
     min-height: 100%;
     width: auto;
     animation: open-ani-bg-in 0.5s 1 forwards, ani-full-bg 10s infinite,ani-full-bg-wid 10s 14.4s infinite;
-    object-fit: cover;
+}
+[tromoSM=crd-00] img{
+width: 250px;
+aspect-ratio: 250/46.8;
+object-fit: cover;
 }
 @keyframes ani-full-bg {
     from,to{
@@ -66,10 +70,12 @@
 }
 [i=b]:hover [stroke="#fff"]:first-child{
     color: black !important;
+    stroke: black;
     fill: black !important;
 }
 [i=b]:hover path,svg{
     stroke: black !important;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: black !important;
     fill: black;
     stroke: black;
@@ -88,7 +94,7 @@
     margin-right: 9px;
     transform: translateX(-20px);
     opacity: 0;
-    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 0.3s ;
     overflow: hidden;
 }
 [i=b]:hover span{
@@ -154,7 +160,7 @@ opacity: 1;
     content: '';
     width: 0%;
     top: 0;
-    transition: 0.2s;
+    transition: 0.25s;
     overflow: hidden;
     background-color: aliceblue;
     left: 0;
