@@ -1,0 +1,20 @@
+window.addEventListener(`DOMContentLoaded`,function(){    
+document.querySelectorAll(`[tromoSM=wr-tr-su]`).forEach(waltuh=>{
+ waltuh.addEventListener('mousemove',function(fuh){
+    rcs=waltuh.getBoundingClientRect()
+    lst=fuh.clientX-rcs.left
+    waltuh.querySelector(`[tromoSM=visual-graphic-curr]`).style.transform=`translateX(${lst}px)`
+    if(lst>=130){
+        waltuh.setAttribute(`tromoSM-ext`,'after1-hv')
+        console.log('after')
+    }
+    else{
+        waltuh.setAttribute(`tromoSM-ext`,'before1-hv')
+        console.log('before')
+    }
+})
+  waltuh.addEventListener("mouseleave",function(){
+        waltuh.setAttribute(`tromoSM-ext`,'none1-hv')
+        console.log('none')
+    })
+})})
