@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<title>Module functions | Easypycode documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link rel="stylesheet" href="file:///C:/Users/T/Downloads/Hellfire-main/Hellfire-main/pyeasy/main.css">
+        <script src="file:///C:/Users/T/Downloads/Hellfire-main/Hellfire-main/pyeasy/main.js"></script>
+    </head>
+<header a="a"><p>Easypycode documentation</p></header>
+<body>
+   <tabselect></tabselect>
+   <h1 a="a" main="title">Module functions</h1>
+   <h2  a="a" lite="title">SetEazyTitle(x)</h2>
+   <group a="a"> 
+    <p a="a">Sets the global title used for all Windows message boxes title created by this module.</p>
+    <p a="a">you must set the title by SetEazyTitle() before using other functions.</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>SetEazyTitle</code-n><code-f>(</code-f><code-s>"Easypycode"</code-s><code-f>)</code-f> </act></code>
+   </group>
+   <h2  a="a" lite="title">ReopenAsAdmin()</h2>
+   <group a="a"> 
+    <p >reopen the main window as admin.</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>ReopenAsAdmin</code-n><code-f>()</code-f> </act></code>
+   <p>output:</p>
+   <img fill="imgsrc" src="reopenasadmin.png" tromoSM="output">    
+</group>
+   <h2  a="a" lite="title">Error(x)</h2>
+   <group a="a"> 
+    <p>Displays a Windows error message box with a red error icon.</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Error</code-n><code-f>(</code-f><code-s>"Error : 500 internal server error"</code-s><code-f>)</code-f> </act></code>
+   <p>output:</p>
+   <img fill="imgsrc" src="error.png" tromoSM="output"> 
+   </group>
+   <h2  a="a" lite="title">Info(x)</h2>
+   <group a="a"> 
+    <p>Displays an information message box with an info icon.</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Info</code-n><code-f>(</code-f><code-s>"This is an info alert"</code-s><code-f>)</code-f> </act></code>
+   <p>output:</p>
+   <img fill="imgsrc" src="info.png" tromoSM="output"> 
+   </group>
+   <h2  a="a" lite="title">Warning(x)</h2>
+   <group a="a"> 
+    <p>Displays an Warning message box with an warning icon.</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Warning</code-n><code-f>(</code-f><code-s>"This is an warning alert"</code-s><code-f>)</code-f> </act></code>
+   <p>output:</p>
+   <img fill="imgsrc" src="warning.png" tromoSM="output"> 
+   </group>
+   <h2  a="a" lite="title">Ask(x,y,**z)</h2>
+   <group a="a"> 
+    <p>Ask a question and run functions depending on the answer</p>
+    <p>x is the question, y is whether the yes/no(True) buttons or ok(False) button is present and you can use z to run different function when clicked different buttons like this,</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Ask</code-n><code-f>(</code-f><code-s>"Is grass green vro?"</code-s>,<code-o>True</code-o>,<code-l>yes</code-l>=<code-n>function1</code-n>,<code-l>no</code-l>=<code-n>function2</code-n><code-f>)</code-f> </act></code>
+   <p>function1() will run if the yes is pressed and function2() will run if no is pressed.</p>
+   <p>output:</p>
+   <img fill="imgsrc" src="ask.png" tromoSM="output"> 
+   </group>
+    <h2  a="a" lite="title">Colored(Color, Text)</h2>
+   <group a="a"> 
+    <p>Prints colored text to the console.</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Colored</code-n><code-f>(</code-f><code-a>ez.</code-a><code-l>lightred</code-l>,<code-s>"colored text"</code-s><code-f>)</code-f> </act></code>
+   <p>output:</p>
+   <img fill="imgsrc" src="colored.png" tromoSM="output"> 
+   </group>
+   <h2  a="a" lite="title">Beep(Frequency, duration)</h2>
+   <group a="a"> 
+    <p>Produces a sound in a specific frequency(x) for a specific period of time(y).</p>
+    <p>Frequency(Hz/int), duration(s/int)</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Beep</code-n><code-f>(</code-f><code-d>500</code-d>,<code-d>5</code-d><code-f>)</code-f> </act></code>
+   </group>
+    <h2  a="a" lite="title">Countdown(timeleft)</h2>
+   <group a="a"> 
+    <p>Prints a live MM:SS countdown timer in the console.</p>
+    <p>timeleft(s/int)</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Countdown</code-n><code-f>(</code-f><code-d>5</code-d><code-f>)</code-f> </act></code>
+   </group>
+    <h2  a="a" lite="title">BeepCountdown(timeleft)</h2>
+   <group a="a"> 
+    <p>Prints a live MM:SS countdown timer that beeps during the last 3 seconds and double-beeps at the end.</p>
+    <p>timeleft(s/int)</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>BeepCountdown</code-n><code-f>(</code-f><code-d>5</code-d><code-f>)</code-f> </act></code>
+   </group>
+    <h2  a="a" lite="title">Copy(text)</h2>
+   <group a="a"> 
+    <p>Copies the text to the clipboard</p>
+    <p>text(text/string)</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Copy</code-n><code-f>(</code-f><code-s>"copy this to the clipboard"</code-s><code-f>)</code-f> </act></code>
+   </group>
+    <h2  a="a" lite="title">Paste(text)</h2>
+   <group a="a"> 
+    <p>Returns text currently stored in the system clipboard.</p>
+    <p>text(text/string)</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-n>print<code-f>(</code-f><code-a>ez.</code-a><code-n>Paste<code-fs>()</code-fs></code-n><code-f>)</code-f></act></code>
+   </group>
+    <h2  a="a" lite="title">OpenInDefaultApp(path)</h2>
+   <group a="a"> 
+    <p>Opens a file or folder using the system’s default application.</p>
+    <p>path(abspath/string)</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>OpenInDefaultApp</code-n><code-f>(</code-f><code-s>"file.png"</code-s><code-f>)</code-f></act></code>
+   </group>
+    <h2  a="a" lite="title">Busy(action)</h2>
+   <group a="a"> 
+    <p>Opens a file or folder using the system’s default application.</p>
+    <p>Shows or stops a console spinner (running in a different thread).</p>
+    <p>"RUN" → start spinner</p>
+    <p>"RESET" → stop spinner</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Busy</code-n><code-f>(</code-f><code-s>"RUN"</code-s><code-f>)</code-f></act></code>
+   </group>
+    <h2  a="a" lite="title">ErrorText(text)</h2>
+   <group a="a"> 
+    <p>Prints a formatted red error message directly to the console.</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>ErrorText</code-n><code-f>(</code-f><code-s>"System failure :51"</code-s><code-f>)</code-f></act></code>
+    <p>output:</p>
+   <img fill="imgsrc" src="errortext.png" tromoSM="output">
+   </group>
+    <h2  a="a" lite="title">Alert(text,icon)</h2>
+   <group a="a"> 
+    <p>Generic Windows message box where you manually choose the icon</p>
+    <p>icon option - CautionIcon,InfoIcon,ErrorIcon,QuestionIcon</p>
+    <p>text(text/string), icon(icon/var)</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Alert</code-n><code-f>(</code-f><code-s>"System failure :51"</code-s>,<code-l><code-a>ez.</code-a>ErrorIcon</code-l><code-f>)</code-f></act></code>
+    <p>output:</p>
+   <img fill="imgsrc" src="alert.png" tromoSM="output">
+   </group>
+    <h2  a="a" lite="title">FlashWindow(duration)</h2>
+   <group a="a"> 
+    <p>Flashes the console window in the taskbar for the given duration.</p>
+    <p>duration(s/int)</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>FlashWindow</code-n><code-f>(</code-f><code-d>5</code-d><code-f>)</code-f></act></code>
+    <p>output:</p>
+   <img fill="imgsrc" src="flashwindow.png" tromoSM="output">
+   </group>
+ <group a='a'>More coming soon...</group>
+
+   <group-seperator></group-seperator>
+   <href a="a"></href>
+   <gradienttypeshit></gradienttypeshit>
+</body>
+</html>
