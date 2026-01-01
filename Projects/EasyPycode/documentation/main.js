@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded",function(){
-    let DEAFAULTIMGPATH='file:///C:/Users/sybau/pyeasy/img/'
+    let DEAFAULTIMGPATH='https://raw.githubusercontent.com/tromoSM/tromoSM/refs/heads/main/Projects/EasyPycode/documentation/img/'
     let RAWIMGOUT='?r=t'
     document.querySelectorAll('[fill=imgsrc').forEach(yo=>{
         yo.src=DEAFAULTIMGPATH+yo.getAttribute('src')+RAWIMGOUT
