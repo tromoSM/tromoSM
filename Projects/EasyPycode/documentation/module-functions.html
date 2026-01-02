@@ -7,6 +7,7 @@
         <script src="main.js"></script>
     </head>
 <header a="a"><p>Easypycode documentation</p></header>
+
 <body>
    <tabselect></tabselect>
    <h1 a="a" main="title">Module functions</h1>
@@ -14,6 +15,7 @@
    <group a="a"> 
     <p a="a">Sets the global title used for all Windows message boxes title created by this module.</p>
     <p a="a">you must set the title by SetEazyTitle() before using other functions.</p>
+    <p more="info">Must not equal to "" or some function will fail.</p>
    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>SetEazyTitle</code-n><code-f>(</code-f><code-s>"Easypycode"</code-s><code-f>)</code-f> </act></code>
    </group>
    <h2  a="a" lite="title">ReopenAsAdmin()</h2>
@@ -98,7 +100,6 @@
    </group>
     <h2  a="a" lite="title">Busy(action)</h2>
    <group a="a"> 
-    <p>Opens a file or folder using the system’s default application.</p>
     <p>Shows or stops a console spinner (running in a different thread).</p>
     <p>"RUN" → start spinner</p>
     <p>"RESET" → stop spinner</p>
@@ -128,6 +129,22 @@
     <p>output:</p>
    <img fill="imgsrc" src="flashwindow.png" tromoSM="output">
    </group>
+    <h2  a="a" lite="title">SendNotification(title,description)</h2>
+   <group a="a"> 
+    <p>Sends a notification with the title and the description (native windows)</p>
+    <p>title(title/string),description(description/string)</p>
+    <p more="info"><strong>More info:</strong> Will raise "[WinError -2147024809] applicationId" if SetEazyTitle() is empty("")</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>SendNotification</code-n><code-f>(</code-f><code-s>"EazyPyCode documentation"</code-s>,<code-s>"EazyPyCode notification example."</code-s><code-f>)</code-f></act></code>
+    <p>output:</p>
+   <img fill="imgsrc" src="sendnotification.png" tromoSM="output">
+   </group>
+    <h2  a="a" lite="title">CheckNetwork()</h2>
+   <group a="a"> 
+    <p>Returns <code-o>True</code-o> if the device is connected to the internet. <code-o>False</code-o> if the device isnt connected to the internet.</p>
+   <code lang="python"><lang a='a'>python</lang><act><code-b>if<code-f>(</code-f></code-b><code-a>ez.</code-a><code-n>CheckNetwork</code-n><code-fs>()</code-fs><code-f>)</code-f>:<br><code-n><whitespace></whitespace>print<code-f>(</code-f><code-s>"This device is connected to the internet"</code-s><code-f>)</code-f></code-n><br><code-b>else</code-b>:<br><code-n><whitespace></whitespace>print<code-f>(</code-f><code-s>"This device is not connected to the internet"</code-s><code-f>)</code-f></code-n></act></code>
+    <p>output:</p>
+   <img fill="imgsrc" src="checknetwork.png" tromoSM="output">
+   </group>
  <group a='a'>More coming soon...</group>
 
    <group-seperator></group-seperator>
@@ -136,6 +153,7 @@
 </body>
 
 </html>
+
 
 
 
