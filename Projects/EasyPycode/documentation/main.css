@@ -25,6 +25,11 @@ header p{
   animation: open-group 0.4s 1 forwards;
     
 }
+whitespace{
+    width: 10px;
+    display: inline-block;
+    opacity: 0;
+}
 [tromoSM="output"]{
     margin: 10px 0px;
     max-width: 230px;
@@ -65,8 +70,9 @@ lang{
 act{
     padding: 7px 20px;
   font-family: SF mono,Consolas,monospace !important;
-
-
+}
+[more="info"]::before{
+content: '•';
 }
 code-a{
     color: #67ffb8;
