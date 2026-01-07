@@ -237,6 +237,7 @@ html,body{
   margin: 0;
   width: 100vw;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
   scrollbar-color: #0000008c rgb(80, 74, 74);
   height: 100%;
   overflow-x: hidden;
@@ -403,4 +404,5 @@ svg{
 }
 img::selection{
     background-color: transparent;
+
 }
