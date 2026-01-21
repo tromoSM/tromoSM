@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded",async function(){
         if(yo.getAttribute('click')=="innerhtml"){
             yo.setAttribute('click-cache',"./"+yo.innerHTML.replaceAll(" ","-").replaceAll("_","-").replaceAll('.','-'))
             yo.addEventListener('click',function(){
-            window.open(yo.innerHTML.replaceAll(" ","-").replaceAll("_","-").replaceAll('.','-')+'.html','_self')
+            window.open(yo.innerHTML.replaceAll(" ","-").replaceAll("_","-").replaceAll('.','-'),'_self')
             })
         }
         yo.addEventListener('mouseenter',function(){
