@@ -8,6 +8,7 @@ header{
   position: fixed;
   background-color: rgb(15, 15, 15);
   padding: 5px 0px;
+  transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   font-size: 17px;
   z-index: +999999999999;
 }
@@ -24,6 +25,22 @@ header p{
     opacity: 0;
   animation: open-group 0.4s 1 forwards;
     
+}
+[lite="title"]::before {
+  content: '#';
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0px 20px;
+  opacity: 0;
+  transform: translate(-35px,2px) scale(0);
+  position: absolute;
+  font-size: 20px;
+}
+[lite="title"]:hover::before {
+  transform: translate(-35px,2px) scale(1);
+  opacity: 0.5;
+}
+[lite="title"]::before:hover{
+    opacity: 1;
 }
 whitespace{
     width: 10px;
@@ -187,10 +204,11 @@ group-seperator{
         transform: translateX(0px);
     }
 }
-@media (max-width:520px)  { 
-    group{
-      width: 75% !important;
-    }
+@media (max-width: 520px) {
+  group {
+    width: 75% !important;
+    overflow: scroll;
+  }
 }
 @media (max-width:740px)  { 
     group{
@@ -232,6 +250,8 @@ html,body{
     color: aliceblue;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
     background-color: black;
 }
 
@@ -241,3 +261,6 @@ html,body{
         url("https://raw.githack.com/tromoSM/Tromo/refs/heads/main/InterVariable.woff2");
         font-family: inter;
     }
+[hiddenT="40"]{
+    transform: translateY(-40px);
+}
