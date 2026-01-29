@@ -25,7 +25,13 @@ header p{
     opacity: 0;
     cursor: pointer;
   animation: open-group 0.4s 1 forwards;
-    
+}
+[side-l]{
+ padding-left: 10px;
+}
+ul{
+    padding: 0;
+    padding-left: 15px;
 }
 [lite="title"]::before {
   content: '#';
