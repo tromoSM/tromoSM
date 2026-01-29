@@ -145,14 +145,197 @@
     <p>output:</p>
    <img fill="imgsrc" src="checknetwork.png" tromoSM="output">
    </group>
+    <h2  a="a" lite="title">CreateQR(content,FilePathWithName)</h2>
+   <group a="a"> 
+    <p>Creates a QR code and saves it to the path given.</p>
+    <p>Do not include the file extension(.png/.jpg) in the FilePathWithName</p>
+    <p>Output directory must exist when running.</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>CreateQR</code-n><code-f>(</code-f><code-s>"Example text"</code-s>,<code-s>"assets/images/qrcode"</code-s><code-f>)</code-f></act></code>
+    <p>output:</p>
+    <p>image will be saved "./assets/images/qrcode.png"</p>
+   <img fill="imgsrc" src="qrcode.png" tromoSM="output">
+   </group>
+    <h2  a="a" lite="title">CreateBarcode(number,FilePathWithName)</h2>
+   <group a="a"> 
+    <p>Creates a Barcode and saves it to the path given.</p>
+    <p>Do not include the file extension(.png/.jpg) in the FilePathWithName</p>
+    <p>Output directory must exist when running.</p>
+    <p>The barcode number must include 12 digits</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>CreateBarcode</code-n><code-f>(</code-f><code-d>241851545431</code-d>,<code-s>"assets/images/barcode"</code-s><code-f>)</code-f></act></code>
+    <p>output:</p>
+    <p>image will be saved "./assets/images/barcode.png"</p>
+   <img fill="imgsrc" src="barcode.png" tromoSM="output">
+   </group>
+    <h2  a="a" lite="title">PrintCenter(text)</h2>
+   <group a="a"> 
+    <p>Prints the given text centered horizontally.</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>PrintCenter</code-n><code-f>(</code-f><code-s>"this is a centered text"</code-s><code-f>)</code-f></act></code>
+    <p>output:</p>
+   <img fill="imgsrc" src="printcenter.png" tromoSM="output">
+   </group>
+    <h2  a="a" lite="title">TypePrint(text)</h2>
+   <group a="a"> 
+    <p>Print the text with a typing animation.</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>TypePrint</code-n><code-f>(</code-f><code-s>"typing animation"</code-s><code-f>)</code-f></act></code>
+   </group>
+    <h2  a="a" lite="title">OpenUrl(url)</h2>
+   <group a="a"> 
+    <p>Opens the given url in the default browser.</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>OpenUrl</code-n><code-f>(</code-f><code-s>"https://github.com/tromoSM/EasyPycode"</code-s><code-f>)</code-f></act></code>
+   </group>
+    <h2  a="a" lite="title">OpenInWebview(title,url)</h2>
+   <group a="a"> 
+    <p>Open the given url in a webview window with the given title</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>OpenInWebview</code-n><code-f>(</code-f><code-s>"EasyPycode - github"</code-s>,<code-s>"https://github.com/tromoSM/EasyPycode/tree/main"</code-s><code-f>)</code-f></act></code>
+    <p>output:</p>
+   <img fill="imgsrc" src="openinwebview.png" tromoSM="output">
+    <p>Note : webview is installed on many windows systems. some older systems might not have it installed. if not install by running this command.</p>
+    <code><lang a="a">bash</lang><act>winget install Microsoft.EdgeWebView2Runtime</act></code>
+   </group>
+    <h2  a="a" lite="title">GetUsername()</h2>
+   <group a="a"> 
+    <p>Returns the current user's username.</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>GetUsername</code-n><code-f>()</code-f></act></code>
+   </group>
+    <h2  a="a" lite="title">LockWorkStation()</h2>
+   <group a="a"> 
+    <p>Locks the current workstation.</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>LockWorkStation</code-n><code-f>()</code-f></act></code>
+   </group>
+    <h2  a="a" lite="title">Pause()</h2>
+   <group a="a"> 
+    <p>Prints 'Press enter to continue...' and will not continue the following code until enter is pressed..</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Pause</code-n><code-f>()</code-f></act></code>
+   </group>
+    <h2  a="a" lite="title">NavigateSettings(page)</h2>
+   <group a="a"> 
+    <p>Navigate to different pages of the settings app.</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>NavigateSettings</code-n><code-f>(</code-f><code-a>ez.</code-a><code-l>settings_about</code-l><code-f>)</code-f></act></code>
+    <p>output :</p>
+    <img src="navigatesettings.png"  fill="imgsrc" tromoSM="output">
+  </group>
+  <h2  a="a" lite="title">ShowAvailableNetworks()</h2>
+   <group a="a"> 
+    <p>Copy the current __file__ to windows shell:startup (current user).</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>MoveSelfToStartup</code-n><code-f>()</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">GetDateAndTime(x)</h2>
+   <group a="a"> 
+    <p a="a">Returns the currect time or date depending on the variable you choose from below,</p>
+    <ul>
+      <li>ez.day</li>
+      <li>ez.month</li>
+      <li>ez.hour</li>
+      <li>ez.milisecond</li>
+      <li>ez.weekday</li>
+      <li>ez.second</li>
+      <li>ez.timeWithMicrosecond</li>
+      <li>ez.timestamp</li>
+    </ul>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>GetDateAndTime</code-n><code-f>(</code-f><code-a>ez.</code-a><code-l>date</code-l><code-f>)</code-f></act></code>
+    <p>output :</p>
+    <ul>
+      <li>ez.day -> 16</li>
+      <li>ez.month -> 12</li>
+      <li>ez.hour -> 14</li>
+      <li>ez.milisecond -> 15416</li>
+      <li>ez.weekday -> tuesday</li>
+      <li>ez.second -> 45</li>
+      <li>ez.timeWithMicrosecond 14:37:45.15416</li>
+      <li>ez.timestamp -> 1765892265.15416</li>
+    </ul>
+  </group>
+  <h2  a="a" lite="title">ConvertToMB(data,current)</h2>
+  <group a="a"> 
+  <p a="a">Returns the given size as MB using Binary(1024).</p>
+  <p a="a">You must choose one as the current data type to continue,</p>
+  <ul>
+    <li>ez.Gigabytes</li>
+    <li>ez.Bytes</li>
+    <li>ez.Kilobytes</li>
+    <li>ez.Bits</li>
+    <li>ez.Terabytes</li>
+  </ul>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>ConvertToMB</code-n><code-f>(</code-f><code-d>1</code-d>,<code-a>ez.</code-a><code-l>Gigabytes</code-l><code-f>)</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">GetUserDir()</h2>
+  <group a="a"> 
+  <p a="a">Returns the current user profile directory</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>GetUserDir</code-n><code-f>()</code-f></act></code>
+    <p>output :</p>
+    <p side-l="">C:\\Users\\TromoSM</p>
+  </group>
+  <h2  a="a" lite="title">SetConsoleTitle(title)</h2>
+  <group a="a"> 
+  <p a="a">Sets the console title (windows)</p>
+    <p>Tip : you must use an input() after the code to make it last or it will only last a split second</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>SetConsoleTitle</code-n><code-f>(</code-f><code-s>"example title"</code-s><code-f>)</code-f></act></code>
+    <p>output :</p>
+    <img src="setconsoletitle.png"  fill="imgsrc" tromoSM="output">
+  </group>
+  <h2  a="a" lite="title">GetProcessID()</h2>
+  <group a="a"> 
+  <p a="a">Returns the currect processsID</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>GetProcessID</code-n><code-f>()</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">GetParentProcessID()</h2>
+  <group a="a"> 
+  <p a="a">Returns the currect Parent ProcessID</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>GetParentProcessID</code-n><code-f>()</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">TerminateProcess(processsID)</h2>
+  <group a="a"> 
+  <p a="a">Terminate the given processsID's process</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>TerminateProcess</code-n><code-f>(</code-f><code-d>6767</code-d><code-f>)</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">ReadFileAsText(path)</h2>
+  <group a="a"> 
+  <p a="a">Returns the given file's content(data) as text</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>ReadFileAsText</code-n><code-f>(</code-f><code-s>"./temp.py"</code-s><code-f>)</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">ReadFileAsBinary(path)</h2>
+  <group a="a"> 
+  <p a="a">Returns the given file's content(data) as Bytes(Binary)</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>ReadFileAsBinary</code-n><code-f>(</code-f><code-s>"./temp.png"</code-s><code-f>)</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">WriteFileAsText(path,data)</h2>
+  <group a="a"> 
+  <p a="a">Writes the given file content(data) as text</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>WriteFileAsText</code-n><code-f>(</code-f><code-s>"./temp.py"</code-s>,<code-s>"yo"</code-s><code-f>)</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">WriteFileAsBinary(path,data)</h2>
+  <group a="a"> 
+  <p a="a">Writes the given file content(data) as Bytes(Binary)</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>WriteFileAsBinary</code-n><code-f>(</code-f><code-s>"./temp.png"</code-s>,<code-l>b</code-l><code-s>"\x89PNG\r\n\x1a\n"</code-s><code-f>)</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">GetDisplayResolution()</h2>
+  <group a="a"> 
+  <p a="a">Returns the current display resolution as an array</p>
+  <ul>
+    <li>[0] -> width</li>
+    <li>[1] -> height</li>
+  </ul>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>GetDisplayResolution</code-n><code-f>()</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">BrightText(text)</h2>
+  <group a="a"> 
+  <p a="a">Prints the given text as bright text (ESC[1m)</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>BrightText</code-n><code-f>(</code-f><code-s>"example bright text"</code-s><code-f>)</code-f></act></code>
+  </group>
+  <h2  a="a" lite="title">Download(url,path)</h2>
+  <group a="a"> 
+  <p a="a">Downloads the given url as a file to the the given path</p>
+    <code lang="python"><lang a='a'>python</lang><act><code-a>ez.</code-a><code-n>Download</code-n><code-f>(</code-f><code-s>"https://www.example.com/download/file.txt"</code-s>,<code-s>"./example_path/"</code-s><code-f>)</code-f></act></code>
+  </group>
+  
  <group a='a'>More coming soon...</group>
-
    <group-seperator></group-seperator>
    <href a="a"></href>
    <gradienttypeshit></gradienttypeshit>
 </body>
 
 </html>
+
 
 
 
