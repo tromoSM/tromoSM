@@ -101,7 +101,7 @@ window.addEventListener("DOMContentLoaded",function(){
             temp$$git$el.setAttribute("lab","el")
             temp$$el$$flgit.appendChild(temp$$git$el)
             temp$$git$el.addEventListener("click",function(){
-                window.open(`https://github.com/tromoSM/${inner}`)
+                window.open(`https://github.com/tromoSM/${inner$title.replaceAll(" ","-").replaceAll('$','s-').toLowerCase()}`)
             })
 
             let temp$$read$el=document.createElement("button")
@@ -138,6 +138,7 @@ window.addEventListener("DOMContentLoaded",function(){
             temp$$webs$el.setAttribute("tromoSM","def-btn11")
             temp$$webs$el.innerHTML=`<?xml version="1.0" encoding="utf-8"?><svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`
              if(dih.homepage.trim()!==""){
+              temp$$webs$el.title='visit site'
               temp$$webs$el.addEventListener("click",function(){
               window.open(dih.homepage,'_blank')
               })
