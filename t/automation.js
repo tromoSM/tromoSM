@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded",function(){
             let main$div=document.createElement(`div`)
             main$div.setAttribute(`tromoSM`,'main-notiff-wr-op')
             main$Wrap.appendChild(main$div)
-            aside$lft=document.createElement(`div`)
+            let aside$lft=document.createElement(`div`)
             aside$lft.setAttribute('tromoSM','aside-proj-di')
             main$div.appendChild(aside$lft)
             imim$bann=document.createElement('img')
@@ -92,7 +92,29 @@ window.addEventListener("DOMContentLoaded",function(){
             aside$lft.appendChild(main$title)   
             let inner$title=o.getAttribute(`title`)
             main$title.innerHTML=inner$title
+            //gitdih
+            let temp$$el$$flgit=document.createElement("div")
+            temp$$el$$flgit.setAttribute("tromoSM",'flex-lf')
+            let temp$$git$el=document.createElement("button")
+            temp$$git$el.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 97"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"  stroke-width="0"></path></svg><p>Visit repo</p>`
+            temp$$git$el.setAttribute("tromoSM","def-btn11")
+            temp$$git$el.setAttribute("lab","el")
+            temp$$el$$flgit.appendChild(temp$$git$el)
+            temp$$git$el.addEventListener("click",function(){
+                window.open(`https://github.com/tromoSM/${inner}`)
+            })
 
+            let temp$$read$el=document.createElement("button")
+            temp$$read$el.innerHTML=`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 10.4V20M12 10.4C12 8.15979 12 7.03969 11.564 6.18404C11.1805 5.43139 10.5686 4.81947 9.81596 4.43597C8.96031 4 7.84021 4 5.6 4H4.6C4.03995 4 3.75992 4 3.54601 4.10899C3.35785 4.20487 3.20487 4.35785 3.10899 4.54601C3 4.75992 3 5.03995 3 5.6V16.4C3 16.9601 3 17.2401 3.10899 17.454C3.20487 17.6422 3.35785 17.7951 3.54601 17.891C3.75992 18 4.03995 18 4.6 18H7.54668C8.08687 18 8.35696 18 8.61814 18.0466C8.84995 18.0879 9.0761 18.1563 9.29191 18.2506C9.53504 18.3567 9.75977 18.5065 10.2092 18.8062L12 20M12 10.4C12 8.15979 12 7.03969 12.436 6.18404C12.8195 5.43139 13.4314 4.81947 14.184 4.43597C15.0397 4 16.1598 4 18.4 4H19.4C19.9601 4 20.2401 4 20.454 4.10899C20.6422 4.20487 20.7951 4.35785 20.891 4.54601C21 4.75992 21 5.03995 21 5.6V16.4C21 16.9601 21 17.2401 20.891 17.454C20.7951 17.6422 20.6422 17.7951 20.454 17.891C20.2401 18 19.9601 18 19.4 18H16.4533C15.9131 18 15.643 18 15.3819 18.0466C15.15 18.0879 14.9239 18.1563 14.7081 18.2506C14.465 18.3567 14.2402 18.5065 13.7908 18.8062L12 20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg><p>ReadMe</p>`
+            temp$$read$el.setAttribute("tromoSM","def-btn11")
+            temp$$read$el.setAttribute("lab","el")
+            temp$$el$$flgit.appendChild(temp$$read$el)
+            temp$$read$el.addEventListener('click',function(){
+                Readme(inner$title)
+            })
+
+            aside$lft.appendChild(temp$$el$$flgit)
+            //
             aside$lft.appendChild(aside$lft$app$topics)
             imim$bann.src=`Assets/card/bg-${o.getAttribute('title').replaceAll('.','-').replaceAll(" ","-").toLowerCase()}.png`
             imim$bann.setAttribute('tromoSM','notif-proj-bann-im')
@@ -111,6 +133,16 @@ window.addEventListener("DOMContentLoaded",function(){
             main$des.innerHTML='<div tr="loader-a"><div tr="inner-loader"></div><div tr="inner-loader"></div><div tr="inner-loader"></div><div tr="inner-loader"></div><div tr="inner-loader"></div></div>'
             fetch(`https://api.github.com/repos/tromoSM/${o.getAttribute('title').replaceAll(" ","-").replaceAll('$','s-').toLowerCase()}`).then(yo => yo.json()).then(dih =>{
             main$des.innerHTML=dih.description
+                        let temp$$webs$el=document.createElement("button")
+            temp$$webs$el.setAttribute("ab","abs-btn")
+            temp$$webs$el.setAttribute("tromoSM","def-btn11")
+            temp$$webs$el.innerHTML=`<?xml version="1.0" encoding="utf-8"?><svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+             if(dih.homepage.trim()!==""){
+              temp$$webs$el.addEventListener("click",function(){
+              window.open(dih.homepage,'_blank')
+              })
+            aside$lft.appendChild(temp$$webs$el)
+            }
             dih.topics.forEach(yo=>{
                 dihs=document.createElement(`p`)
                 dihs.innerHTML=yo
@@ -148,4 +180,51 @@ window.addEventListener("DOMContentLoaded",function(){
     document.querySelectorAll(`[section]`).forEach(e=>{
         e.id=e.getAttribute('section')
     })
+    window.Readme=async function(dih){
+            let amain$Wrap=document.createElement(`div`)
+            let amain$cl=document.createElement(`div`)
+            amain$Wrap.appendChild(amain$cl)
+            amain$cl.setAttribute(`tromoSM`,'close$repo')
+            amain$cl.addEventListener(`click`,function(){
+                amain$Wrap.remove()
+            })
+            amobile$cl=document.createElement(`button`)
+            amobile$cl.setAttribute(`tromoSM`,`mob-close-rep`)
+            amobile$cl.setAttribute(`on-mob`,``)
+            amobile$cl.innerText="\u00D7"
+            amobile$cl.addEventListener(`click`,function(){
+                amain$Wrap.remove()
+            })
+            amain$Wrap.appendChild(amobile$cl)
+            amain$Wrap.setAttribute('tromoSM',`main-wra-allk0`)
+            let amain$div=document.createElement(`div`)
+            amain$div.setAttribute(`tromoSM`,'main-notiff-wr-op')
+            amain$Wrap.appendChild(amain$div)
+            let main$$readme$c=document.createElement('div')
+            main$$readme$c.setAttribute('tromoSM','Readmeinner')
+            await fetch(`https://raw.githubusercontent.com/tromoSM/${dih.replaceAll(" ","-").replaceAll('$','s-').toLowerCase()}/main/README.md`).then(dihh=>{
+                if(!dihh.ok){
+                    throw new Error(`Error ${dihh.status}`)
+                }
+                return dihh.text()
+            })
+            .then(dihhh=>{
+            main$$readme$c.innerHTML=marked.parse(dihhh)
+            }).catch(dihhhh=>main$$readme$c.innerHTML=marked.parse(`error :${dihhhh}`))
+           
+            main$$readme$c.querySelectorAll('blockquote').forEach(dihhhhh=>{
+                let f=dihhhhh.querySelector(`p`)
+                if(!f)return
+                const temp$$fcs=f.textContent.match(/\[\!(.*?)\]/)
+                if(!temp$$fcs) return
+                dihhhhh.setAttribute('tromoSM',temp$$fcs[1])
+                f.textContent=f.textContent.replace(/\[\!(.*?)\]/,``).trim()
+            })
+            let aside$lft=document.createElement(`div`)
+            aside$lft.setAttribute('tromoSM','aside-proj-di')
+            aside$lft.appendChild(main$$readme$c)
+            amain$div.appendChild(aside$lft)
+            document.body.appendChild(amain$Wrap)      
+    }
+
 })
