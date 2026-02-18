@@ -2,7 +2,6 @@ window.addEventListener(`DOMContentLoaded`,function(){
   let full$dv=[]
     window.addEventListener('keydown',function(dev){
         full$dv.push(dev.key)
-        console.log(full$dv)
      if(full$dv.join()==`1,1,1`){
       document.querySelector(`[tromoSM="main-bg-inner-o"]`).pause()
       full$dv=[]
