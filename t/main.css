@@ -2,6 +2,17 @@
     font-family: black-main;
     src: url("https://rawcdn.githack.com/tromoSM/tromoSM/refs/heads/main/Portfolio/Assets/fonts/circular-black.woff2");
 }
+@font-face {
+    font-family: InterR;
+    src: url('Assets/fonts/InterVar.ttf');
+}
+@font-face{
+   font-family: SpaceMONO;
+   src: url('Assets/fonts/SpaceMono.ttf');
+}
+*{
+    color-scheme: dark;
+}
 [tromoSM=abp-lab]{
    display: none;
 }
@@ -71,6 +82,7 @@
     margin-top: 5px;
     border-radius: 15px;
     padding: 10px 20px;
+    min-height: 80px;
     animation:  io-ani-as forwards 0.3s 0.1s;
 }
 [tr="loader-a"]{
@@ -83,8 +95,22 @@
     display: flex;
     align-items: end;
     justify-content: center;
-
-    
+}
+code {
+	background: #313131;
+	padding: 1px 10px;
+	border-radius: 4px;
+	word-break: keep-all;
+	display: inline;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	margin: 2px;
+	font-family: SpaceMONO,SF Mono,Consolas,monospace;
+	font-weight: 100;
+	font-size: 14px;
+}
+[tr="inner-loader"] h4{
+    line-height: 1.6;
 }
 [tr="inner-loader"]{
     width: 3px;
@@ -121,19 +147,176 @@ yogurt-in btw
         height: 10%;
     }
 }
+[tromoSM='def-btn11']{
+    width: 30px;
+  height: 30px;
+  transition: 0.2s;
+  background: #282828;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 50px;
+  min-height: 30px;
+  min-width: 30px;
+  border: none;
+  outline: none;
+  box-shadow: 3px 2px 2px -4px rgb(255, 255, 255) inset, -2px -1px 2px -3px rgba(255, 255, 255, 0.39) inset,0px 0px 20px #0000004f;
+}
 
-[tromoSM=aside-app-info-board]{
-    position: absolute;
-    bottom: 0;
+[tromoSM=flex-lf]{
     display: flex;
+    width: 90%;
+    gap: 3px;
+    justify-content: flex-start;
     align-items: center;
-    height: 30px;
-    background: linear-gradient(0deg,#020202,transparent);
+}
+[ab=abs-btn]{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+[lab=el] p{
+ display: block;
+    width:0%;
+    font: inherit;
+    color: white;
+ transition: 0.2s;
+overflow:hidden;
+text-overflow: ellipsis;
+white-space:  nowrap;
+ 
+}
+img::selection {
+	background: transparent;
+	color: transparent;
+}
+/*MD S*/
+[tromosm="Readmeinner"]{
+    padding: 10px;
+    position: relative;
+  max-width: 100%;
+    box-sizing: border-box;
+}
+[tromosm="Readmeinner"] img{
+    max-width: 100%;
+}
+[tromosm="Readmeinner"] a {
+	color: #62d7fd;
+	text-decoration: 1px underline #62d7fd5e;
+	position: relative;
+}
+[tromosm="Readmeinner"] a::before{
+    height: 1px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    content: '';
+    background-color: #62d7fd;
+    bottom: 0;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+[tromosm="Readmeinner"] a:hover::before{
     width: 100%;
-    padding: 5px 20px;
-    z-index: +9;
-    transform: translateY(31px);
-    animation: io-ani-as-in forwards 0.3s 0.2s ;
+}
+blockquote::before {
+	height: 100%;
+	width: 3px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+}
+blockquote {
+	background: #262424;
+	position: relative;
+	padding: 17px 5px 5px 12px;
+    margin-right: 5px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+[tromosm="NOTE" i]::before,[tromosm="TIP" i]::before{background:#1f6feb;}
+[tromosm="NOTE" i]::after,[tromosm="TIP"i]::after{color: #1f6feb;}
+[tromosm="IMPORTANT" i]::after{color: #8957e5;}
+[tromosm="IMPORTANT" i]::before{background-color: #8957e5;}
+[tromosm="WARNING" i]::after{color: #9e6a03;}
+[tromosm="WARNING" i]::before{background-color: #9e6a03;}
+[tromosm="CAUTION" i]::after{color: #da3633;}
+[tromosm="CAUTION" i]::before{background-color: #da3633;}
+table {
+	table-layout: fixed;
+	width: 100%;
+	background: #ffffff0d;
+	border-collapse: collapse;
+}
+tr, td,th{
+	padding: 0px 10px !important;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+thead {
+	background: #f0f8ff14;
+	border: 1px solid #f0f8ff21;
+}
+tr {
+	border: 1px solid #57575775 !important;
+}
+th {
+	text-align: left;
+	border-right: 1px solid #666;
+}
+blockquote::after {
+	content: 'note';
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 4px 9px;
+	font-size: 11px;
+	text-transform: capitalize;
+}
+/*MD S END*/
+[lab=el]:hover p{
+    width:100%;
+}
+[lab=el]:hover svg{
+    width: 15px;
+}
+[lab=el]:hover{
+    width: 90px;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+[lab=el],[lab=el] p{
+transition-duration: 0.3s;
+}
+[tromoSM="def-btn11"]:active {
+	transform: scale(1.15);
+	filter: brightness(2) !important;
+	transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+[tromoSM='def-btn11']:hover{
+  filter: brightness(1.1);
+  box-shadow: 3px 2px 2px -4px rgb(255, 255, 255) inset, -2px -1px 2px -3px rgb(255, 255, 255) inset,0px 0px 20px #0000004f !important;
+  background: #313131 !important;
+}
+[tromoSM='def-btn11'] svg{
+    width: 21px;
+    fill: white;
+    stroke: white;
+    transition: 0.2s;
+}
+[tromoSM=aside-app-info-board]{
+position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  background: linear-gradient(0deg,#020202,transparent);
+  width: 100%;
+  padding: 5px 20px;
+  justify-content: center;
+  z-index: +9;
+  border-radius: 0px 0px 25px 25px;
+  box-sizing: border-box;
 }
 @keyframes io-ani-as{
     from{
@@ -162,7 +345,7 @@ yogurt-in btw
     gap: 2px;
     margin-left: 2px;
     border: none;
-    font-family: SF Pro;
+    font-family: InterR, SF Pro, -apple-system, apple-color-font, Noto Sans, Arial,sans-serif;
     display: flex;
     color: aliceblue;
     justify-content: center;
@@ -225,6 +408,7 @@ yogurt-in btw
         transform: scale(1);
     }
 }
+
 [tromoSM=notif-proj-bann-im]{
     background-color: #272525;
     width: 100%;
@@ -232,7 +416,7 @@ yogurt-in btw
     padding: 21px 20px;
 }
 [tromoSM=main-t-proj-notiff]{
-    font-family: SF Pro;
+    font-family: InterR, SF Pro, -apple-system, apple-color-font, Noto Sans, Arial,sans-serif;
     color: aliceblue;
     font-size: 38px;
     font-weight: 700;
@@ -257,10 +441,14 @@ yogurt-in btw
     align-items: center;
     overflow: hidden;
     display: flex;
+    overflow-y: visible;
+  scrollbar-width: none;
     flex-direction: column;
     position: relative;
     height: 90%;
     margin: 20px;
+    padding: 0px 0px 15px 0px;
+  box-sizing: border-box;
 }
 [tromoSM=aside-proj-lf]{
     width: 60%;
@@ -506,7 +694,7 @@ padding: 20px 5px 0px 5px;
     align-items: center;
     gap: 5px;
     position: relative;
-    font-family: SF Pro;
+    font-family: InterR, SF Pro, -apple-system, apple-color-font, Noto Sans, Arial,sans-serif;
 }
 
 [i=b]:hover::before{
@@ -655,6 +843,9 @@ mix-blend-mode: difference;
     gap: 10px;
 
 }
+button{
+    font-family: InterR, SF Pro, -apple-system, apple-color-font, Noto Sans, Arial,sans-serif;
+}
 html,body{
     padding: 0;
     margin: 0;
@@ -662,7 +853,7 @@ html,body{
     width: 100%;
     height: 100%;
     scrollbar-width: thin;
-    font-family: SF Pro;
+    font-family: InterR, SF Pro, -apple-system, apple-color-font, Noto Sans, Arial,sans-serif;
 }
 p{
     padding: 0;
@@ -691,7 +882,7 @@ p{
  width: 100%;
  text-align: center;
  font-weight: 700;
- font-family: black-main,SF Pro;
+ font-family: black-main,InterR, SF Pro, -apple-system, apple-color-font, Noto Sans, Arial,sans-serif;
  font-size: 110px;
  position: relative;
  top: 0;
