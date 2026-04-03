@@ -6,6 +6,11 @@
 <title>TromoSM</title>
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="nprogress.css">
+<link rel="stylesheet" href="easyJSui/loader.css">
+<link rel="stylesheet" href="easyJSui/sys.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
+<script src="easyJSui/sys.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 <script src="onload.js"></script>
 <script src="cubix-scroll.js"></script>
@@ -14,7 +19,7 @@
 <script src="automation.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
 <script src="visual.js"></script>
-
+<script src="feedback.js"></script>
 <script>
 NProgress.start()
 NProgress.configure({ showSpinner: false });
@@ -72,11 +77,14 @@ NProgress.configure({ showSpinner: false });
    <p tromoSM="abp-lab">contact us</p>
 
    </div>
+   <button tromoSM="feedback">Send feedback or request features</button>
    </div> 
 <div all="content">
   <section section="project">
     <h1 t="project">Projects</h1>
     <div tromoSM="x-wrp-scrl-im-log" ScrollerX="press"> 
+        <tromoSM-card title="YT-Premium-Patch"></tromoSM-card>
+        <tromoSM-card title="XcreenDesk"></tromoSM-card>
         <tromoSM-card title="CryptivisX"></tromoSM-card>
         <tromoSM-card title="HostTalk"></tromoSM-card>
         <tromoSM-card title="EasyPycode"></tromoSM-card>
