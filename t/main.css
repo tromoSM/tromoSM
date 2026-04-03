@@ -13,6 +13,130 @@
 *{
     color-scheme: dark;
 }
+[width=full]{
+    width: 100%;
+}
+flex label{
+    transition: 0.2s;
+    height: 100%;
+    background-color: #cccccc2c;
+    z-index: +6;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    border-radius: 0px 50px 50px 0px;
+    align-items: center;
+    padding: 0px 10px;
+    height: 30px;
+}
+flex label:first-child{
+    border-radius: 50px 0px 0px 50px;
+}
+flex input[type=radio]{
+    display: none;
+    z-index: +6;
+    position: relative;
+}
+flex input[type=radio]:checked + bg{
+    filter: none;
+    width: 100%;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+bg{
+    display: block;
+    width: 0%;
+    height: 100%;
+    transition: 0.3s;
+    top: 0;
+    left: 0;
+    filter: blur(10px);
+    background-color: #09ff000e;
+    transform: scale(1.2);
+    z-index: 0;
+    position: absolute;
+}
+flex {
+	display: flex;
+	justify-content: flex-start;
+	width: 95%;
+    height: 52px;
+}
+flexC input[type='text'],flexC textarea{
+    width: 95%;
+    border:1px solid #ffffff12;
+    outline: none;
+    font-family: inherit;
+    padding: 5px 7px;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #00000026;
+}
+flexC button{
+  background: #272525;
+  border-radius: 50px;
+  border: none;
+  font-size: 14px;
+  padding: 8px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+flexC label[radiodih]{
+  font-size: 13px;
+  color: #b8b8b8;
+  margin-left: 1px;
+  cursor: pointer;
+  user-select: none;
+}
+flexC input[type=checkbox]{
+    accent-color: #303030;
+}
+flexC input[type='text']:focus,flexC textarea:focus{
+    border: 1px solid #ffffff30;
+}
+[info='description']{
+    height: 71px;
+}
+[aft='*']::after{
+    content: ' *';
+    font-size: 10px;
+    color: #ff5454;
+}
+[tromoSM="INlabel"] {
+	color: #e3e3e3;
+	text-transform: capitalize;
+	font-size: 12px;
+}
+[tromoSM="INlabel"]:first-child{
+    margin-top: 10px;
+}
+flexC {
+    gap: 5px;
+	display: flex;
+	justify-content: flex-start;
+	width: 95%;
+    flex-direction: column;
+}
+[tromoSM="feedback"]{
+    background: #1e1e1e;
+    border-radius: 50px;
+    padding: 5px 9px;
+    font-family: inherit;
+    font-size: 0.8em;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    z-index: 0;
+    bottom: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    right: 10px;
+}
+[tromoSM="feedback"]:active{
+    transform: scale(0.95);
+}
 [tromoSM=abp-lab]{
    display: none;
 }
