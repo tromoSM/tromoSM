@@ -225,4 +225,11 @@ window.addEventListener('DOMContentLoaded',function(){
                 })
             })
     })
+    const tab=new URLSearchParams(window.location.search)
+    const tabval=tab.get("feedback")
+    if(tabval=='true'){
+        if(document.querySelector(`[tromosm="feedback"]`)){
+            document.querySelector(`[tromosm="feedback"]`).click()
+        }
+    }
 })
