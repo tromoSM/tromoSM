@@ -168,7 +168,8 @@ window.addEventListener('DOMContentLoaded',function(){
                     description:document.querySelector(`[info='description']`).value,
                     credits: temp$$getCRE,
                     priorityLEVEL:'fr SITE',
-                    temps:mainSendELquery
+                    temps:mainSendELquery,
+                    project:document.querySelector(`[info='project name']`).value
                 }])
                 if(error){
                  console.error(`error : ${error}`)
