@@ -524,7 +524,6 @@ position: fixed;
 [tromoSM=aside-info-bttn]:hover::before{
     scale: 1;
 }
-
 [tromosm="aside-topics-repo"]{
     display: flex;
     align-items: center;
@@ -543,6 +542,11 @@ position: fixed;
     width: 440px;
     height: 80%;
     animation:  io-ani 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 1;
+}
+[popup=closing]{
+        transition: 0.1s;
+        transform: scale(0.9);
+        opacity: 0;
 }
 @keyframes io-ani{
     from{
