@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded',async function(){
     document.querySelector('[tromosm="main-bg-outr"]').append(count)
     for(let star=0;star<=starcount;star++){
     count.innerText=`${star} Stars earned`  
+    document.documentElement.style.setProperty('--progress-star',`${((star/starcount)*100)}%`)
     if(star<starcount-10){
     await sleep(10)
     }
