@@ -16,6 +16,12 @@
 [width=full]{
     width: 100%;
 }
+[section="upcoming"]{display: none;}
+[section="upcoming"][enabled]{display: block;}
+[section='upcoming'] [tromoSM=scrollX-agentA],[section='upcoming'] [tromoSM=scrollX-agentB]{
+    display: none;
+}
+[contain]{object-fit: contain !important;padding: 7px;box-sizing: border-box;}
 flex label{
     transition: 0.2s;
     height: 100%;
