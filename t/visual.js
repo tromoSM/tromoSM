@@ -1,4 +1,13 @@
-window.addEventListener(`DOMContentLoaded`,function(){    
+window.addEventListener(`DOMContentLoaded`,async function(){   
+function sleep(dih){
+        return new Promise(resolve=>setTimeout(resolve,dih))
+} 
+async function waitforfetch(){
+ while(!document.querySelector('tromoSM-card')){
+    await sleep(100)
+ }
+}
+await waitforfetch()
 document.querySelectorAll(`[tromoSM=wr-tr-su]`).forEach(waltuh=>{
  waltuh.addEventListener('mousemove',function(fuh){
     rcs=waltuh.getBoundingClientRect()
