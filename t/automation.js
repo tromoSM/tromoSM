@@ -19,7 +19,15 @@ window.addEventListener("DOMContentLoaded",function(){
         let visual$1$cr=document.createElement(`div`)
         visual$1$cr.setAttribute(`tromoSM`,'visual-graphic-curr')
         let imim=document.createElement(`img`)
+        if(!$.hasAttribute('autofill')){
         imim.src=`Assets/card/bg-${$.getAttribute('title').replaceAll('.','-').replaceAll(" ","-").toLowerCase()}.png`
+        }
+        else{
+            fetch(`https://raw.githubusercontent.com/tromoSM/tromoSM-assets/refs/heads/main/repos/${$.getAttribute('title').replaceAll('.','-').replaceAll(" ","-").toUpperCase()}/manifest.json`).then(e=>e.json()).then(es=>{
+                  imim.src=es.assets.logo.white
+            })
+            imim.setAttribute('contain','')
+        }
         imim$wr.appendChild(imim)
         $.appendChild(imim$wr)
         imim$wr.appendChild(label$ir)
@@ -116,7 +124,15 @@ window.addEventListener("DOMContentLoaded",function(){
             aside$lft.appendChild(temp$$el$$flgit)
             //
             aside$lft.appendChild(aside$lft$app$topics)
-            imim$bann.src=`Assets/card/bg-${o.getAttribute('title').replaceAll('.','-').replaceAll(" ","-").toLowerCase()}.png`
+            if(!o.hasAttribute('autofill')){
+             imim$bann.src=`Assets/card/bg-${o.getAttribute('title').replaceAll('.','-').replaceAll(" ","-").toLowerCase()}.png`
+            }
+            else{
+             fetch(`https://raw.githubusercontent.com/tromoSM/tromoSM-assets/refs/heads/main/repos/${o.getAttribute('title').replaceAll('.','-').replaceAll(" ","-").toUpperCase()}/manifest.json`).then(e=>e.json()).then(es=>{
+                  imim$bann.src=es.assets.logo.white
+             })
+             imim$bann.setAttribute('contain','')
+            }
             imim$bann.setAttribute('tromoSM','notif-proj-bann-im')
             let main$des=document.createElement(`p`)
             asideL$app$info=document.createElement(`div`)
