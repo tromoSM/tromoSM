@@ -10,6 +10,9 @@ window.addEventListener("DOMContentLoaded",async function(){
         I.dataset.url="true"
         I.id=`open-${I.getAttribute(`section`)}`
     })
+    function sleep(dih){
+        return new Promise(resolve=>setTimeout(resolve,dih))
+    }
     /*AUTOLAYOUT*/
     await fetch("https://raw.githubusercontent.com/tromoSM/tromoSM-assets/refs/heads/main/projects/info.json").then(i=>i.json()).then(info=>{
      document.querySelectorAll('[tromoSM="x-wrp-scrl-im-log"]').forEach(cardtracks=>{
@@ -109,14 +112,18 @@ window.addEventListener("DOMContentLoaded",async function(){
             let main$cl=document.createElement(`div`)
             main$Wrap.appendChild(main$cl)
             main$cl.setAttribute(`tromoSM`,'close$repo')
-            main$cl.addEventListener(`click`,function(){
+            main$cl.addEventListener(`click`,async function(){
+                main$Wrap.setAttribute('popup','closing')
+                await sleep(200)
                 main$Wrap.remove()
             })
             mobile$cl=document.createElement(`button`)
             mobile$cl.setAttribute(`tromoSM`,`mob-close-rep`)
             mobile$cl.setAttribute(`on-mob`,``)
             mobile$cl.innerText="\u00D7"
-            mobile$cl.addEventListener(`click`,function(){
+            mobile$cl.addEventListener(`click`,async function(){
+                main$Wrap.setAttribute('popup','closing')
+                await sleep(200)
                 main$Wrap.remove()
             })
             main$Wrap.appendChild(mobile$cl)
@@ -237,14 +244,18 @@ window.addEventListener("DOMContentLoaded",async function(){
             let amain$cl=document.createElement(`div`)
             amain$Wrap.appendChild(amain$cl)
             amain$cl.setAttribute(`tromoSM`,'close$repo')
-            amain$cl.addEventListener(`click`,function(){
+            amain$cl.addEventListener(`click`,async function(){
+                amain$Wrap.setAttribute('popup','closing')
+                await sleep(200)
                 amain$Wrap.remove()
             })
             amobile$cl=document.createElement(`button`)
             amobile$cl.setAttribute(`tromoSM`,`mob-close-rep`)
             amobile$cl.setAttribute(`on-mob`,``)
             amobile$cl.innerText="\u00D7"
-            amobile$cl.addEventListener(`click`,function(){
+            amobile$cl.addEventListener(`click`,async function(){
+                amain$Wrap.setAttribute('popup','closing')
+                await sleep(200)
                 amain$Wrap.remove()
             })
             amain$Wrap.appendChild(amobile$cl)
