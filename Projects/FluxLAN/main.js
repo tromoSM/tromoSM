@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded',function(){
     SITE_LAST_UPDATED='26/06/29'
     SITE_VER='v1'
-    SITE_REL=3
+    SITE_REL=4
 
     window.FluxLAN_Site=`FluxLAN Site ${SITE_VER}/${SITE_REL} (${SITE_LAST_UPDATED})`
     let select=document.querySelector('#os')
