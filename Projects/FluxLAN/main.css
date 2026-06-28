@@ -290,6 +290,7 @@ button[downloadb]:hover::before,button[downloadb][disabled]::before,button[info]
 select{
 	background-color: #c2c2c2;
 	color-scheme: dark;
+    color:white;
 	border-radius: 50px;
 	border: none;
 	padding: 5px 10px;
