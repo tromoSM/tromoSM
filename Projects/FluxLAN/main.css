@@ -48,14 +48,14 @@ animated{
   position: fixed;
   width: 50%;
   left: 0;
-  transform: var(--tra);
+  transform: var(--tra) translateZ(0);
   z-index: -1;
-  border-radius: 50%;
+  will-change: clip-path;
   top: 0;
   overflow: visible;
-  transform-origin: top;
-  filter: saturate(2) blur(3px);
-   animation: rotate 15s infinite linear,stre 12s infinite alternate;
+  transform-origin: left;
+  filter: saturate(2);
+  animation: inf 5s infinite alternate,rotate 15s infinite linear,stre 12s infinite alternate;
 }
 
 
@@ -71,7 +71,7 @@ under,all{
     border-bottom: 1px solid #00000026;
 }
 animated:nth-child(2){
-  animation: rotate 18s infinite linear ;
+  animation: inf 10s infinite alternate,rotate 18s infinite linear ;
 }
 @keyframes stre{
   from{
@@ -94,16 +94,6 @@ animated:nth-child(2){
     transform: rotate(0deg) var(--tra);
   }
   to{transform: rotate(360deg) var(--tra);}
-}
-@supports(clip-path: shape(from 50% 0%, line to 100% 100%, close)) {
-    animated{
-     filter: saturate(2);
-     transform-origin: left;
-     animation: inf 5s infinite alternate,rotate 15s infinite linear,stre 12s infinite alternate;
-    }
-    animated:nth-child(2){
-     animation: inf 10s infinite alternate,rotate 18s infinite linear ;
-    }
 }
 header a:not([nolinkst]){
   font-family: Montserrat, SF Pro, Arial, sans-serif;
