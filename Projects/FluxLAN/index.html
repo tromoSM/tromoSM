@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" icon="black" type="image/x-icon" media="(prefers-color-scheme: light)" href="https://github.com/tromoSM/FluxLAN/blob/main/static/Assets/favicon.png?raw=true">
+        <link rel="icon" icon="white" type="image/x-icon" media="(prefers-color-scheme: dark)" href="https://github.com/tromoSM/FluxLAN/blob/main/static/Assets/favicon-l.png?raw=true">
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js"></script>
+        <!--SEO SHI BELOW-->
+        <title>FluxLAN - Reuse your old phones as a camera network</title>
+        <meta charset="utf-8">
+        <meta name="author" content="tromoSM">
+        <meta name="robots" content="index, follow">
+        <meta name="description" content="FluxLAN is a cross-platform application that turns old smartphones into useful devices for Windows, macOS, and Linux.">
+        <meta name="keywords" content="camera, fluxlan, software, cctv, tromoSM, camera network, IP Cam, IP camera, Windows, linux, MacOS, Security camera">
+        <meta property="og:title" content="FluxLAN">
+        <meta property="og:type" content="website">
+    </head>
+
+    <body>
+        <header>
+        <img logo="" alt="FluxLAN" src="https://raw.githubusercontent.com/tromoSM/FluxLAN/refs/heads/main/static/Assets/logo.png">
+        <right>
+         <a whentoosmall github="" href="https://github.com/tromoSM">Github</a>
+         <a whentoosmall feedback="" href="https://tromosm.gt.tc/?feedback=true&amp;utm_source=fluxlan_welcome">Feedback</a>
+         <nav>
+          <a href="#Download" nolinkst><button mainbutton>Download</button></a>
+         </nav>
+        </right>
+        </header>
+        
+    <main>
+        <animated></animated>
+        <animated></animated>
+        <section id="main">
+         <fl>
+            <flex>
+             <img crisplogo src="https://raw.githubusercontent.com/tromoSM/FluxLAN/4e8491abb6d56dcba3cae3703205b580abd55914/static/Assets/logo.svg" alt="FluxLAN">
+            </flex>
+            <h2>Reuse your old phones as a camera network</h2>
+            <flex leftmarg>
+                <a href="#Download" nolinkst><button mainbutton>Download</button></a>
+            </flex>
+         </fl>
+        </section>
+        <section id="features">
+            <h3>Features</h3>
+             <replacetable>
+                <nest>
+                    <under>Capturing</under>
+                    <all>
+                        <p>Take live captures at full quality</p>
+                        <p>and Record video at full quality</p>
+                    </all>
+                </nest>
+                <nest>
+                    <under>Motion detection</under>
+                    <all>
+                        <p>Live motion detection</p>
+                        <p>Alerts when motion is detected</p>
+                        <p>Turn off/on motion detection</p>
+                    </all>
+                </nest>
+                <nest>
+                    <under>Cross compatibility</under>
+                    <all>
+                        <p>FluxLAN works on multiple operating systems</p>
+                    </all>
+                </nest>
+                <nest>
+                    <under>Long terms support</under>
+                    <all>
+                        <p>You'll be able to check and install new updates just from the dashboard</p>
+                    </all>
+                </nest>
+             </replacetable>
+        </section>
+        <section id="Download">
+            <h3>Download</h3>
+            <label for="os">Choose you operating system</label>
+            <select id="os">
+                <option>Windows</option>
+                <hr/>
+                <option>MacOS</option>
+                <hr/>
+                <optgroup label="Linux">
+                    <option>Ubuntu</option>
+                    <option>Other linux distros</option>
+                </optgroup>
+            </select>
+            <select id="reltype">
+                <option>Default (performance)</option>
+                <option>Lite</option>
+            </select>
+            <br>
+            <a href="#install"><button leftmarg mainbutton hidden info="macos"></button></a>
+            <br>
+            <br>
+           <a><button leftmarg mainbutton downloadb>Download</button></a>
+            <br><warn leftmarg></warn>
+        </section>
+        <section id="install">
+            <h3>Installation</h3>
+            <label for="instatype">Installation instructions for</label>
+            <select id="instatype">
+                <option>Installer (Windows)</option>
+                <optgroup label="MacOS">
+                    <option>Homebrew</option>
+                    <option>Manual (MacOS)</option>
+                </optgroup>
+                <hr/>
+                <option>Ubuntu</option>
+                <option>Manual (git)</option>
+            </select>
+            <br>
+            <instructionpanel>
+                <instruction val="Installer (Windows)" hidden>
+                    <p>Download installer from <a href="#Download">Downloads</a> and install.</p>
+                </instruction>
+                <instruction val="Homebrew" hidden>
+                    <p>Open terminal in your mac and run these,</p>
+                    <codewrap dynamictext><code>brew tap tromosm/fluxlan</code><copy copy="brew tap tromosm/fluxlan"></copy></codewrap>
+                    <codewrap dynamictext><code>brew install fluxlan</code><copy copy="brew install fluxlan"></copy></codewrap>
+                </instruction>
+                <instruction val="Manual (MacOS)" hidden>
+                    <p>Download MacOS package from <a href="#Download">Downloads</a></p>
+                    <p>And Open terminal in the folder containing the downloaded file and run,</p>
+                    <codewrap dynamictext><code>chmod +x FluxLAN-macOS{-}</code><copy copy="chmod +x FluxLAN-macOS{-}"></copy></codewrap>
+                    <codewrap dynamictext><code>./FluxLAN-macOS{-}</code><copy copy="./FluxLAN-macOS{-}"></copy></codewrap>
+                </instruction>
+                <instruction val="Ubuntu">
+                    <p>Download Ubuntu package from <a href="#Download">Downloads</a></p>
+                    <p>Open a terminal in the folder containing the downloaded file and run,</p>
+                    <codewrap dynamictext><code>sudo apt install ./FluxLAN{-}-Ubuntu.deb</code><copy copy="sudo apt install ./FluxLAN{-}-Ubuntu.deb"></copy></codewrap>
+                </instruction>
+                <instruction val="Manual (git)">
+                    <p>Make sure you have <a href="https://www.python.org/downloads/" target="_blank">Python</a> and <a href="https://git-scm.com/install/" target="_blank">Git</a> installed.</p>
+                    <p>Open the terminal in the folder you wish to install FluxLAN (make sure there's no files inside this folder) and Run these commands in your terminal</p>
+                    <codewrap><code>git clone https://github.com/tromoSM/FluxLAN.git .</code><copy copy="git clone https://github.com/tromoSM/FluxLAN.git ."></copy></codewrap>
+                    <p>After that,</p>
+                    <codewrap><code>pip install -r requirements.txt</code><copy copy="pip install -r requirements.txt"></copy></codewrap>
+                    <p>Now run the app using,</p>
+                    <codewrap><code>python main.py</code><copy copy="python main.py"></copy></codewrap>
+                </instruction>
+            </instructionpanel>
+        </section>
+    </main>
+
+    <footer>
+           <leftflx>
+            <img logo="small" alt="FluxLAN" src="https://raw.githubusercontent.com/tromoSM/FluxLAN/refs/heads/main/static/Assets/logo.png">
+            <p foott>© 2026-tromoSM (Licensed under apache 2.0 license)</p>
+            </leftflx>
+
+            <rightflx>
+                <a href="https://tromosm.gt.tc/?utm_source=othr_flxlnSite">other projects from developer</a>
+                <a href="https://tromosm.gt.tc/?feedback=true&utm_source=feed_flxlnSite">feedback/requests</a>
+                <a href="https://github.com/tromoSM/FluxLAN/?utm_source=gitfoot_flxlnSite">Github</a>
+            </rightflx>
+            
+    </footer>
+    </body>
+</html>
