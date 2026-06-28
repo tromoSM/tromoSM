@@ -48,8 +48,9 @@ animated{
   position: fixed;
   width: 50%;
   left: 0;
-  transform: var(--tra);
+  transform: var(--tra) translateZ(0);
   z-index: -1;
+  will-change: clip-path;
   top: 0;
   overflow: visible;
   transform-origin: left;
