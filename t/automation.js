@@ -23,6 +23,9 @@ window.addEventListener("DOMContentLoaded",async function(){
                 let card=document.createElement('tromoSM-card')
                 card.setAttribute('title',project)
                 cardtracks.appendChild(card)
+                if(info.autofill.find((proj)=>proj==project)){
+                    card.setAttribute('autofill','')
+                }
             })
         }
         else if(section=='upcoming'){
